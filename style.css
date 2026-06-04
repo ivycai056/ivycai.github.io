@@ -563,7 +563,7 @@ footer {
     background: #cfc7b7;
 }
 
-@media(max-width:900px) {
+/* @media(max-width:900px) {
 
     .hero,
     .education-section,
@@ -677,5 +677,162 @@ footer {
     .project-card {
         margin-bottom: 2rem;
         border-radius: 1.4rem;
+    }
+} */
+
+/* OVERALL RESPONSIVE LAYOUT */
+
+/* Large desktop */
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+    .hero {
+        grid-template-columns: 1fr .85fr;
+        gap: 3rem;
+    }
+
+    .project-card {
+        grid-template-columns: 320px 1fr;
+    }
+
+    h1 {
+        font-size: clamp(2.8rem, 5vw, 4.6rem);
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .hero,
+    .education-section,
+    .two-column,
+    .detail-grid,
+    .cards-grid,
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 7vw;
+        background: rgba(251, 246, 234, .98);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 4rem;
+    }
+
+    .hero-photo-wrap {
+        justify-self: center;
+    }
+
+    .project-image img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .hero-actions,
+    .project-links,
+    .contact-links {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Phone */
+@media (max-width: 560px) {
+    .section-padding {
+        padding: 4rem 5vw;
+    }
+
+    .page-hero {
+        padding: 4rem 5vw 2rem;
+    }
+
+    .site-header {
+        padding: 1rem 5vw;
+    }
+
+    h1 {
+        font-size: 2.35rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .hero-actions,
+    .project-links,
+    .contact-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn,
+    .project-btn,
+    .contact-links a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-photo {
+        width: 100%;
+        border-radius: 1.5rem;
+    }
+
+    .photo-badge {
+        right: .5rem;
+        bottom: 1rem;
+        font-size: .8rem;
+    }
+
+    .project-card {
+        margin-bottom: 2rem;
+        border-radius: 1.4rem;
+    }
+
+    .project-image img {
+        height: 240px;
+    }
+
+    .project-content,
+    .education-card,
+    .contact-section,
+    .detail-card {
+        padding: 1.5rem;
+    }
+
+    .project-tags span,
+    .tag-grid span {
+        font-size: .78rem;
     }
 }
