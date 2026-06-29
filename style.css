@@ -507,6 +507,76 @@ footer {
     max-width: 11ch;
 }
 
+.theme-toggle {
+    border: 1px solid rgba(66, 88, 59, .18);
+    background: rgba(255, 255, 255, .65);
+    color: var(--moss);
+    border-radius: 999px;
+    padding: .55rem .8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+}
+
+body.dark-mode {
+    --cream: #151812;
+    --sage: #a9c79a;
+    --moss: #d8ead1;
+    --olive: #9cad83;
+    --ink: #f4f0e8;
+    --muted: #c7c2b8;
+    --petal: #2b3328;
+    --white: #1f241c;
+
+    background: radial-gradient(circle at top left, rgba(156, 173, 131, .18), transparent 32rem),
+        linear-gradient(180deg, #11140f, #181c14 45%, #20251c);
+}
+
+body.dark-mode .site-header {
+    background: rgba(21, 24, 18, .86);
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+body.dark-mode .card,
+body.dark-mode .education-card,
+body.dark-mode .experience-card,
+body.dark-mode .project-card,
+body.dark-mode .contact-section {
+    background: rgba(31, 36, 28, .9);
+    border-color: rgba(255, 255, 255, .12);
+}
+
+body.dark-mode .secondary,
+body.dark-mode .theme-toggle {
+    background: rgba(255, 255, 255, .08);
+    color: var(--ink);
+}
+
+body.dark-mode .project-content p,
+body.dark-mode .detail-card p,
+body.dark-mode ul,
+body.dark-mode .hero-text,
+body.dark-mode .company,
+body.dark-mode footer {
+    color: var(--muted);
+}
+
+body.dark-mode .project-tags span,
+body.dark-mode .tag-grid span,
+body.dark-mode .pill {
+    background: rgba(255, 255, 255, .08);
+    color: var(--ink);
+    border-color: rgba(255, 255, 255, .12);
+}
+
+body.dark-mode .nav-links {
+    background: rgba(21, 24, 18, .98);
+}
+
 /* OVERALL RESPONSIVE LAYOUT */
 
 /* Large desktop */
